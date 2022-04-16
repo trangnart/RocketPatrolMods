@@ -9,7 +9,7 @@ class Play extends Phaser.Scene {
         this.load.image('fish', './assets/fish.png');
         this.load.image('sky', './assets/sky.png');
         // load spritesheet
-        this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+        this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 30, startFrame: 0, endFrame: 9});
     }
 
     create() {
@@ -42,7 +42,7 @@ class Play extends Phaser.Scene {
         this.anims.create({
             key: 'explode',
             frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
-            frameRate: 30
+            frameRate: 20
         });
 
         // initialize score
