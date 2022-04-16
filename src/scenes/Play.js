@@ -5,7 +5,7 @@ class Play extends Phaser.Scene {
 
     preload() {
         // load images/tile sprites
-        this.load.image('rocket', './assets/rocket.png');
+        this.load.image('paw', './assets/paw.png');
         this.load.image('spaceship', './assets/spaceship.png');
         this.load.image('starfield', './assets/starfield.png');
         // load spritesheet
@@ -25,7 +25,7 @@ class Play extends Phaser.Scene {
         this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0 ,0);
 
         // add Rocket (p1)
-        this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'rocket').setOrigin(0.5, 0);
+        this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'paw').setOrigin(0.5, 0);
 
         // add Spaceships (x3)
         this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'spaceship', 0, 30).setOrigin(0, 0);
@@ -111,8 +111,8 @@ class Play extends Phaser.Scene {
 
     checkCollision(rocket, ship) {
         // simple AABB checking
-        if (rocket.x < ship.x + ship.width && 
-            rocket.x + rocket.width > ship.x && 
+        if (rocket.x < ship.x + ship.width &&
+            rocket.x + rocket.width > ship.x &&
             rocket.y < ship.y + ship.height &&
             rocket.height + rocket.y > ship. y) {
                 return true;
@@ -123,7 +123,7 @@ class Play extends Phaser.Scene {
 
     shipExplode(ship) {
         // temporarily hide ship
-        ship.alpha = 0;                         
+        ship.alpha = 0;
         // create explosion sprite at ship's position
         let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
         boom.anims.play('explode');             // play explode animation
@@ -134,8 +134,8 @@ class Play extends Phaser.Scene {
         });
         // score add and repaint
         this.p1Score += ship.points;
-        this.scoreLeft.text = this.p1Score; 
-        
+        this.scoreLeft.text = this.p1Score;
+
         this.sound.play('sfx_explosion');
       }
 }
