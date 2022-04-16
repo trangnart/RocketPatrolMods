@@ -18,6 +18,7 @@ class Play extends Phaser.Scene {
 
         // green UI background
         //this.add.rectangle(0, borderUISize + borderPadding, game.config.width, borderUISize * 2, 0xF2BFD7).setOrigin(0, 0);
+
         // white borders
         this.add.rectangle(0, 0, game.config.width, borderUISize, 0xFFFFFF).setOrigin(0 ,0);
         this.add.rectangle(0, game.config.height - borderUISize, game.config.width, borderUISize, 0xFFFFFF).setOrigin(0 ,0);
@@ -50,14 +51,14 @@ class Play extends Phaser.Scene {
 
         // display score
         let scoreConfig = {
-            fontFamily: 'Courier',
-            fontSize: '28px',
+            fontFamily: 'Roboto',
+            fontSize: '25px',
             backgroundColor: '#F6D7E8',
             color: '#FFFFFF',
-            align: 'right',
+            align: 'left',
             padding: {
-                top: 5,
-                bottom: 5,
+                top: 4,
+                bottom: 4,
             },
             fixedWidth: 100
         }
