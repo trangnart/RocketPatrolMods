@@ -1,3 +1,9 @@
+/*
+ * Jane Tran
+ * Rocket Patrol -> Cat Nom
+ * 04/17/2022
+ * 12 hours
+ */
 class Menu extends Phaser.Scene {
     constructor() {
         super("menuScene");

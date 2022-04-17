@@ -1,3 +1,9 @@
+/*
+ * Jane Tran
+ * Rocket Patrol -> Cat Nom
+ * 04/17/2022
+ * 12 hours
+ */
 class Play extends Phaser.Scene {
     constructor() {
         super("playScene");
@@ -30,10 +36,10 @@ class Play extends Phaser.Scene {
         this.p1Rocket = new Rocket(this, game.config.width/2, game.config.height - borderUISize - borderPadding, 'paw').setOrigin(0.5, 0.7);
 
         // add Spaceships (x3)
-        this.ship01 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*4, 'fish', 0, 30).setOrigin(0, 0);
-        this.ship02 = new Spaceship(this, game.config.width + borderUISize*3, borderUISize*5 + borderPadding*2, 'fish', 0, 20).setOrigin(0,0);
-        this.ship03 = new Spaceship(this, game.config.width, borderUISize*6 + borderPadding*4, 'fish', 0, 10).setOrigin(0,0);
-        this.ship04 = new Spaceship(this, game.config.width + borderUISize*4, borderUISize*2.5, 'mice', 0, 30).setOrigin(0, 0);
+        this.ship01 = new Spaceship(this, game.config.width + borderUISize*7, borderUISize*5, 'fish', 0, 30).setOrigin(0, 0);
+        this.ship02 = new Spaceship(this, game.config.width + borderUISize*6, borderUISize*6 + borderPadding*2, 'fish', 0, 20).setOrigin(0,0);
+        this.ship03 = new Spaceship(this, game.config.width, borderUISize*7+ borderPadding*5, 'fish', 0, 10).setOrigin(0,0);
+        this.ship04 = new Spaceship(this, game.config.width + borderUISize*5, borderUISize*3, 'mice', 0, 50).setOrigin(0, 0);
         // define keys
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
@@ -52,7 +58,7 @@ class Play extends Phaser.Scene {
 
         // display score
         let scoreConfig = {
-            fontFamily: 'Roboto',
+            fontFamily: 'Monospace',
             fontSize: '25px',
             backgroundColor: '#F6D7E8',
             color: '#FFFFFF',

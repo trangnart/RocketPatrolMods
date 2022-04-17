@@ -1,3 +1,9 @@
+/*
+ * Jane Tran
+ * Rocket Patrol -> Cat Nom
+ * 04/17/2022
+ * 12 hours
+ */
 // Rocket prefab
 class Rocket extends Phaser.GameObjects.Sprite {
     constructor(scene, x, y, texture, frame) {
